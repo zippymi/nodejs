@@ -1,12 +1,17 @@
 pipeline {
     agent any
-
     stages {
-        stage('Checkout Code') {
+        stage('Git Clone') {
             steps {
-                echo 'hello world'
+                git branch: 'main', 
+                    credentialsId: 'your-credentials-id', 
+                    url: 'your-repository-url'
             }
         }
-         
+        stage('Hello') {
+            steps {
+                echo 'Hello World' 
+            }
+        }
     }
 }
