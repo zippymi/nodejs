@@ -4,7 +4,7 @@ pipeline {
         stage('Git Clone') {
             steps {
                 git branch: 'main', 
-                    credentialsId: 'Zippymi', 
+                    credentialsId: 'zippymi', 
                     url: 'https://github.com/zippymi/nodejs'
             }
         }
